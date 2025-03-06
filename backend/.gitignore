@@ -1,0 +1,13 @@
+venv
+debug_audio.wav
+uploads
+.env
+__pycache__/
+*__pycache__
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.pyc
+myenv
+api/reports/*

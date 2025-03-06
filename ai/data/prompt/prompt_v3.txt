@@ -1,0 +1,53 @@
+### Objective
+Based on the input **phoneme alignment triplet list** and the **sentence spoken by the child**, analyze the child’s pronunciation accuracy, conduct grammatical analysis, assess the pronunciation and grammar correctness, and provide specific feedback and improvement suggestions.
+
+### Challenges
+- Precisely identify pronunciation errors.
+- Clearly point out specific pronunciation errors and their frequency in the feedback.
+- Perform grammatical analysis to identify errors in syntax.
+- Provide clear, encouraging feedback to promote learning.
+- Analyze the theme from the child’s spoken sentence or paragraph.
+
+### Strategy
+- Input the **phoneme alignment triplet list**, formatted as (word, correct pronunciation, child's incorrect pronunciation).
+- Input the full sentence or paragraph of **the child’s speech**.
+- Count the frequency of each phoneme error and identify the most common mistakes.
+- Analyze the sentence or paragraph of **the child’s speech** for grammatical errors.
+- Provide detailed feedback and suggestions for improvement based on accuracy and error frequency.
+
+### Actions
+1. Iterate through the **phoneme triplet list** to find mismatched phonemes between the correct and incorrect pronunciations for each word.
+2. Record the position and frequency of each phoneme error.
+3. Summarize the pronunciation and grammatical errors from the **phoneme triplet list** and **the child’s speech**.
+4. Identify the most frequent pronunciation errors.
+5. Provide a comprehensive report based on the analysis, guiding the child on how to improve.
+
+### Results
+- Output format as follows:
+  - **AI Language Therapy Assistant**: [Name according to **subject_name**]
+  - **Theme of the Conversation**: [Analyze and state the theme from the child’s speech, e.g., ocean creatures or marine life]
+  - **Child Engagement Level**: Determine engagement level based on the proportion of emotions in the **attitude** list: High - responds quickly/Moderate - responds slowly/Low - unwilling to respond
+  - **Vocabulary and Word Usage**:
+    Based on **the child’s speech**, output:
+    1. Number of correct words used: [Total number of correct words]
+    2. Total word count: [Total word count]
+    3. Vocabulary range: (Basic/Intermediate/Advanced)
+  - **Sentence Structure**:
+    1. Types of sentences used: [Count the types of sentences based on **sentence_label_list** and list them]
+    2. Average sentence length: [e.g., 4-5 words per sentence]
+    3. List specific grammar errors and their location (e.g., "In the sentence 'The cat isn't happy.', 'isn't' is a grammatical error and should be 'is not' for clearer expression." Avoid avoiding conversational expressions).
+  - **Phoneme Error Tracking**:
+    1. Total number of recorded errors: [e.g., 10 errors]
+    2. Types of errors:
+       List the most frequent pronunciation errors (e.g., "The most frequent phoneme errors include: 'e' (5 times), 'a' (3 times)").
+       List each specific pronunciation error and its position (e.g., "In the word 'cat', the error was 'cet'. The incorrect phoneme is 'e', located in the 2nd syllable").
+  - **Comprehensive Feedback Report**: Provide improvement suggestions based on the identified errors (e.g., "Practice making clear vowel sounds, using pronunciation videos for guidance. Try mimicking the sounds and practicing daily for 15 minutes to see significant improvement!").
+
+---
+
+### Input:
+- **Phoneme Alignment Triplet List**: {page_contents}
+- **Child’s Speech**: {query}
+- **Emotional List**: {attitude}
+- **Assistant Name**: {subject_name}
+- **Sentence Types**: {sentence_label_list}
